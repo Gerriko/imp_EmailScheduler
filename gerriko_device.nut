@@ -1,4 +1,4 @@
-// Copyright (c) 2015 Colin Gerrish (Gerriko IOT)
+// Created: 13 April 2015
 // This file is licensed under the MIT License
 // http://opensource.org/licenses/MIT
 
