@@ -19,7 +19,7 @@ If sensor data has been requested for a specified time period then this time per
 
 Device Code included here does not actually take sensor readings. Placeholders are simply used and it will be up to the user to modify the device code to be able to take readings.
 
-The device code has been set up to ensure that up to 20 readings can be handled.
+Similarly to agent, the device code has been set up to ensure that up to 20 readings can be handled - although this is memory dependant (if future enhancements planned).
 
 ## License
 The example code in this library is licensed under the [MIT License](../master/LICENSE).
