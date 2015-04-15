@@ -11,7 +11,7 @@ The [Bootstrap](http://getbootstrap.com/) html, CSS and JS framework template is
 
 The sending of data from html page to Imp Agent is handled through jquery rather than using a submit button to post data. However, the agent code can be readily adapted to accomodate the normal form post method using a submit button and then allow for a second html confirmation page to be included.
 
-Within the http.onrequest(httpHandler) routine, data received via post method is parsed. This code DOES NOT ENCRYPT OR HASH THE DATA when posting to imp. Within the agent simple comparison checks are made, based on data received. For example up to 20 email request schedules can be handled concurrently as the imp wakeup method is used.
+Within the http.onrequest(httpHandler) routine, data received via post method is parsed. This code does not encrypt or hash the data when posting to imp. Within the agent simple comparison checks are made, based on data received. For example up to 20 email request schedules can be handled concurrently as the imp wakeup method is used.
 
 If sensor data has been requested for a specified time period then this time period is adjusted using a constant DEVICE_PREP_TIME which is set at 2 seconds. This ensures that the imp device will wakeup 2 seconds before the email request time and take sensor readings and then send these to the agent.
 
