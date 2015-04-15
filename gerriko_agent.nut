@@ -1,4 +1,4 @@
-// Copyright (c) 2015 Colin Gerrish (Gerriko IOT)
+// Created: 13 April 2015
 // This file is licensed under the MIT License
 // http://opensource.org/licenses/MIT
 
@@ -139,17 +139,17 @@ function SignInPage(message)
 
                     $('#DS0').on('click', function(event) {
                         if ($('#DS0').hasClass('active')) $('#DS0').text('Temperature');
-                        else $('#DS0').text('Include Temperature');
+                        else $('#DS0').text('\u2713 Temperature');
                     });
                     
                     $('#DS1').on('click', function(event) {
                         if ($('#DS1').hasClass('active')) $('#DS1').text('Humidity');
-                        else $('#DS1').text('Include Humidity');
+                        else $('#DS1').text('\u2713 Humidity');
                     });
                     
                     $('#DS2').on('click', function(event) {
                         if ($('#DS2').hasClass('active')) $('#DS2').text('Door Status');
-                        else $('#DS2').text('Include Door Status');
+                        else $('#DS2').text('\u2713 Door Status');
                     });
 
                     function updateSchedule() {
