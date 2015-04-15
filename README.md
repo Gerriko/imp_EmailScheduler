@@ -7,11 +7,11 @@ The diagram shown illustrates the process flow for this application.
 
 ## Agent Code
 
-The [Bootstrap](http://getbootstrap.com/) html, CSS and JS framework template is used to style the single html page. This enables the html page to automatically scale and adjust for small smartphone screen sizes through to larger desktop computer monitors. The page is also designed for touch screen use and hence checkboxes are modified to be buttons. A further modification is added using javascript is added which changes the text within a button to confirm that the button has been checked.
+The [Bootstrap](http://getbootstrap.com/) html, CSS and JS framework template is used to style the single html page. This enables the html page to automatically scale and adjust for small smartphone screen sizes through to larger desktop computer monitors. The page is also designed for touch screen use and hence checkboxes are modified to display as buttons. A further modification is added, using javascript, which adds a tick symbol to the text within a button to confirm that the button has been checked.
 
 The sending of data from html page to Imp Agent is handled through jquery rather than using a submit button to post data. However, the agent code can be readily adapted to accomodate the normal form post method using a submit button and then allow for a second html confirmation page to be included.
 
-Within the http.onrequest(httpHandler) routine, data received via post method is parsed. This code DOES NOT ENCRYPT THE DATA. Simple checks are made based on data received. For example up to 20 email request schedules can be handled concurrently as the imp wakeup method is used.
+Within the http.onrequest(httpHandler) routine, data received via post method is parsed. This code DOES NOT ENCRYPT OR HASH THE DATA when posting to imp. Within the agent simple comparison checks are made, based on data received. For example up to 20 email request schedules can be handled concurrently as the imp wakeup method is used.
 
 If sensor data has been requested for a specified time period then this time period is adjusted using a constant DEVICE_PREP_TIME which is set at 2 seconds. This ensures that the imp device will wakeup 2 seconds before the email request time and take sensor readings and then send these to the agent.
 
